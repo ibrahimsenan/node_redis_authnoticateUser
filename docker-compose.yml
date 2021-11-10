@@ -1,0 +1,23 @@
+version: "3.4"
+
+services:
+  user_auth_server:
+    image: user_auth_server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 6700:6700
+    volumes:
+      - .:/usr/src/app
+      - .:/usr/src/app/node_modules/
+
+  redis_server:
+    image: redis
+    volumes:
+      - redis:/cache/dbauth
+
+volumes:
+  redis:
