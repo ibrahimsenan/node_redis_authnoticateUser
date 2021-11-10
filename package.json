@@ -1,0 +1,42 @@
+{
+  "name": "node_redis_authnoticateuser",
+  "version": "1.0.0",
+  "description": "Node.js application for authenticating user access using redis server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "set NODE_ENV=test&& jest",
+    "start": "nodemon -L  ./src/server/server.js"
+  },
+  "jest": {
+    "verbose": true,
+    "modulePaths": [
+      "<rootDir>"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrahimsenan/node_redis_authnoticateUser.git"
+  },
+  "author": "Ibrahim Senan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibrahimsenan/node_redis_authnoticateUser/issues"
+  },
+  "homepage": "https://github.com/ibrahimsenan/node_redis_authnoticateUser#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "cor": "0.0.0",
+    "express": "^4.17.1",
+    "hat": "0.0.3",
+    "jest": "^27.3.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "redis": "^3.1.2"
+  },
+
+  "devDependencies": {
+    "jest": "^27.2.0",
+    "supertest": "^6.1.6",
+    "nodemon": "^2.0.13"
+  }
+}
