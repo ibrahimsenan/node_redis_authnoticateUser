@@ -27,6 +27,30 @@ class ApiHelper {
     const formattedObject = lodash.omit(JSON.parse(objectString), keys);
     return formattedObject;
   }
+
+  errorResponse(response, data, message) {
+    response &&
+      response
+        .status(200)
+        .send(
+          this.errorObject(
+            data ? data : false,
+            message ? message : "Document not found!"
+          )
+        );
+  }
+
+  successfulResponse(response, data, message) {
+    response &&
+      response
+        .status(200)
+        .send(
+          this.successObject(
+            data ? data : true,
+            message ? message : "successfully founded!"
+          )
+        );
+  }
 }
 
 module.exports = ApiHelper;
